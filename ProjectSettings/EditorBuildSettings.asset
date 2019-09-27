@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 1b781e67107070344a29e622c50d976c
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/new.unity
     guid: 6232c2f4afb4d734d9214b89ed2e52a9
+  - enabled: 1
+    path: Assets/Scenes/Crash_Scene.unity
+    guid: 3dbcede2e76d4e7499e106008178f15a
   m_configObjects: {}
