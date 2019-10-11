@@ -126,6 +126,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1201717667}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &208494351
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 208494352}
+  m_Layer: 0
+  m_Name: bulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &208494352
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208494351}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.033, y: 1.399, z: 0.663}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1639965428}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &275089261
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +196,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275089261}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9445d174b1f7b2144844e3bce40079ae, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -5943,7 +5973,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126427133}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9445d174b1f7b2144844e3bce40079ae, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -6328,7 +6358,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217151071}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9445d174b1f7b2144844e3bce40079ae, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -11371,6 +11401,34 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &1639965426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1864377543906390, guid: 8e22c9d9467f33a4ea7c36518c108402,
+    type: 3}
+  m_PrefabInstance: {fileID: 856069702}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1639965427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639965426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce6571b90314c247ae7149cd7b6b3b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8476004021521752942, guid: baa74b7a46bf9b644808fc531423af8b,
+    type: 3}
+  bulletSpawn: {fileID: 208494352}
+  bullet: {fileID: 0}
+--- !u!4 &1639965428 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4248838232962462, guid: 8e22c9d9467f33a4ea7c36518c108402,
+    type: 3}
+  m_PrefabInstance: {fileID: 856069702}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1710667345
 GameObject:
   m_ObjectHideFlags: 0
@@ -11411,7 +11469,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710667345}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9445d174b1f7b2144844e3bce40079ae, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
