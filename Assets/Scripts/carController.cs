@@ -9,7 +9,7 @@ public class carController : MonoBehaviour {
     //float dirx;
 
     int current = 0;
-    float moveSpeed = 0.5f;
+    float moveSpeed = 1.0f;
     
 	// Update is called once per frame
 

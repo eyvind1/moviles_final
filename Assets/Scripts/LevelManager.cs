@@ -21,4 +21,8 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(pNombreNivel);
     }
+    public void SalirAplicacion()
+    {
+        Application.Quit();
+    }
 }
