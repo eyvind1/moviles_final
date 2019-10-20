@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1467850999560238754}
   - component: {fileID: -263692655653181662}
   - component: {fileID: -7083278529099850653}
+  - component: {fileID: -4238444381715778062}
   m_Layer: 0
   m_Name: PlayerAvatar
   m_TagString: Untagged
@@ -52,7 +53,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3339039881448714706}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -166,3 +167,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 25
   rotationSpeed: 500
+--- !u!114 &-4238444381715778062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3339039881448714706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57050d2eab955d74eb52bbfff74887d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterValue: 0
+  myCharacter: {fileID: 0}
