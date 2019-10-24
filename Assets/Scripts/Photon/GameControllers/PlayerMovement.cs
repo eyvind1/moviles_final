@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController myCC;
     public float movementSpeed;
     public float rotationSpeed;
-
+    float moveSpeed = 2.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +22,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if(PV.IsMine)
         {
-            BasicMovement();
-            BasicRotation();
+            DeviceMovement();
+            //BasicMovement();
+            //BasicRotation();
         }
     }
     void BasicMovement()
@@ -42,13 +43,32 @@ public class PlayerMovement : MonoBehaviour
         }
         if(Input.GetKey(KeyCode.D))
         {
-            myCC.Move(transform.forward*Time.deltaTime*movementSpeed);
+            myCC.Move(transform.right*Time.deltaTime*movementSpeed);
         }
+
 
     }
     void BasicRotation()
     {
         float mouseX = Input.GetAxis("Mouse X")* Time.deltaTime*rotationSpeed;
         transform.Rotate(new Vector3(0,mouseX,0));
+    }
+
+    void DeviceMovement()
+    {
+        Vector3 position = transform.position;
+		float x = (Input.acceleration.x*moveSpeed);
+        if(transform.position.x+ x<-20)
+        {
+            position.x = -20;
+        }
+        else if(transform.position.x +x>20)
+        {
+            position.x =20;
+        }
+        else{
+            position.x +=x;
+        }
+        transform.position=position;
     }
 }
