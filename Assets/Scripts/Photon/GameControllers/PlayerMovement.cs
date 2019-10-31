@@ -57,18 +57,73 @@ public class PlayerMovement : MonoBehaviour
     void DeviceMovement()
     {
         Vector3 position = transform.position;
-		float x = (Input.acceleration.x*moveSpeed);
-        if(transform.position.x+ x<-20)
+        Debug.Log("Soy x: " +transform.position.x);
+        Debug.Log("Soy z :" +transform.position.z);
+        float x = (Input.acceleration.x*moveSpeed);
+      
+        if(transform.position.x==-76 )
         {
-            position.x = -20;
+            x=x*-1;
+            if(transform.position.z+ x<-20)
+            {
+                position.z = -20;
+            }
+            else if(transform.position.z +x>20)
+            {
+                position.z =20;
+            }
+            else{
+                position.z +=x;
+            }
+            transform.position=position;
         }
-        else if(transform.position.x +x>20)
+		else if(transform.position.z==-76 )
         {
-            position.x =20;
+            if(transform.position.x+ x<-20)
+            {
+                position.x = -20;
+            }
+            else if(transform.position.x +x>20)
+            {
+                position.x =20;
+            }
+            else{
+                position.x +=x;
+            }
+            transform.position=position;
         }
-        else{
-            position.x +=x;
+        else if(transform.position.z == 76)
+        {
+            x=x*-1;
+            if(transform.position.x+ x<-20)
+            {
+                position.x = -20;
+            }
+            else if(transform.position.x +x>20)
+            {
+                position.x =20;
+            }
+            else{
+                position.x +=x;
+            }
+            transform.position=position;
         }
-        transform.position=position;
+        else if(transform.position.x == 76)
+        {
+            
+            if(transform.position.z+ x<-20)
+            {
+                position.z = -20;
+            }
+            else if(transform.position.z +x>20)
+            {
+                position.z =20;
+            }
+            else{
+                position.z +=x;
+            }
+            transform.position=position;
+        }
+        
     }
 }
