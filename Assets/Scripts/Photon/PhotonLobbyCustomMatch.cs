@@ -12,11 +12,13 @@ public class PhotonLobbyCustomMatch : MonoBehaviourPunCallbacks, ILobbyCallbacks
     public int roomSize;
     public GameObject roomListingPrefab; 
     public Transform roomsPanel;
-    //public InputField  roomNameInputField;
+    
+    public List<RoomInfo> roomListings;
     // Start is called before the first frame update
     void Start()
     {
         PhotonNetwork.ConnectUsingSettings();
+        roomListings = new List<RoomInfo>();
     }
 
     // Update is called once per frame
@@ -38,18 +40,47 @@ public class PhotonLobbyCustomMatch : MonoBehaviourPunCallbacks, ILobbyCallbacks
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         base.OnRoomListUpdate(roomList);
-        RemoveRoomListings();
+        //RemoveRoomListings();
+        int tempIndex;
+
         foreach(RoomInfo room in roomList)
         {
-            ListRoom(room);
+            if (roomListings != null)
+            {
+                tempIndex = roomListings.FindIndex(ByName(room.Name));
+            }
+            else
+            {
+                tempIndex = -1;
+            }
+            if (tempIndex != -1)
+            {
+                roomListings.RemoveAt(tempIndex);
+                Destroy(roomsPanel.GetChild(tempIndex).gameObject);
+            }
+            
+                roomListings.Add(room);
+                ListRoom(room);
+            
+            
         }
     }
 
+    static System.Predicate<RoomInfo> ByName(string name)
+    {
+        return delegate(RoomInfo room)
+        {
+            return room.Name == name;
+        };
+    } 
+
     void RemoveRoomListings()
     {
+        int i = 0;
         while (roomsPanel.childCount!=0)
         {
-            Destroy(roomsPanel.GetChild(0).gameObject);
+            Destroy(roomsPanel.GetChild(i).gameObject);
+            i++;
         }
     }
 
