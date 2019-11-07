@@ -721,10 +721,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c05b4a9fc9cd51f4c8d5f208af1d6d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoints:
+  nextPlayersTeam: 1
+  healthDisplay: {fileID: 0}
+  spawnPointsTeamOne:
   - {fileID: 17437146}
+  spawnPointsTeamTwo:
   - {fileID: 1370892283}
+  spawnPointsTeamThree:
   - {fileID: 1726881370}
+  spawnPointsTeamFour:
   - {fileID: 1747965792}
 --- !u!4 &802805454
 Transform:
