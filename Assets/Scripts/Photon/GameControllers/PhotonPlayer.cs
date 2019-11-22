@@ -9,6 +9,7 @@ public class PhotonPlayer : MonoBehaviour
     public PhotonView PV;
     public GameObject myAvatar;
     public int myTeam;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -78,4 +79,5 @@ public class PhotonPlayer : MonoBehaviour
     {
         myTeam = whichTeam;
     }
+
 }
